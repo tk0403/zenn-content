@@ -3,7 +3,7 @@ title: "sync-diff-inspectorの使い方：MySQL（or TiDB）でデータの差�
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["TiDB","MySQL"]
-published: false
+published: true
 ---
 ２つの同じデータを持つはずのDB同士を実際に比較してみたいなぁということはないでしょうか？
 レプリケーションであったり、（何らかの理由で）DBを移行することを考える場合にはたまにあるかと思います（めったにない）。
@@ -19,7 +19,7 @@ https://github.com/pingcap/tidb-tools
 1. 比較元（MySQL）と比較先（TiDB）双方のテーブル構造を比較チェック
 2. 構造が同一のテーブルのデータを比較チェック
 3. （2.の）差分解消のためのSQLを生成する
-ツールです。
+ツールです。実行後の出力は、上記の比較結果のサマリーと実行ログ、修正用SQLファイルの3つです。
 :::message
 MySQL-MySQL、TiDB-TiDBでも利用することが可能です。
 :::
